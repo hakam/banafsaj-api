@@ -43,19 +43,11 @@ db.sequelize = sequelize;
 
 db.Sequelize = Sequelize;
 
-db.distributionRequest.hasMany(db.distributionRequestItems, { as: 'items', foreignKey: 'purchaseorderId' });
-db.distributionRequestItems.belongsTo(db.distributionRequest);
-db.purchaseorder.hasMany(db.purchase_order_items, { as: 'items', foreignKey: 'purchaseorderId' });
-db.purchase_order_items.belongsTo(db.purchaseorder);
+
 // db.ltaRequest.hasMany(db.ltaRequest_request_items, { as: 'items', foreignKey: 'ltaId' });
 // db.ltaRequest_request_items.belongsTo(db.ltaRequest);
-db.purchaserequest.hasMany(db.purchase_request_items, { as: 'items', foreignKey: 'purchaserequestId' });
-db.purchase_request_items.belongsTo(db.purchaserequest);
-db.projectstatus.hasMany(db.projects);
-db.projects.belongsTo(db.projectstatus, { through: 'statusId' });
-db.coreMenuItem.belongsToMany(db.coreMenuItem, { as: 'Children', through: 'parentId' })
-db.tasks.hasMany(db.tasktags);
-db.tasktags.belongsTo(db.tasks);
+
+
 
 
 
