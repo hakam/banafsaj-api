@@ -81,7 +81,7 @@ app.use((req, res, next) => {
 
 app.use(cors(corsOptions));
 
-//db.sequelize.sync({ alter: true });
+db.sequelize.sync({ alter: true });
 
 //app.use(morgan("combined", { stream: logger.stream.write }));
 
